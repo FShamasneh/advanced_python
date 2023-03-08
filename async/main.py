@@ -22,3 +22,8 @@ def task_completed_callback_handler(job_id: str, callback_message: dict) -> None
 
 def job_completed_callback_handler(job_id: str, callback_message: dict) -> None:
     print(f'Job completed in {job_id=}: {callback_message=}')
+
+
+if __name__ == '__main__':
+    seed(0)  # just to get repeatability in various sleeps we use to simulate long-running processes
+    main(str(uuid4()))
